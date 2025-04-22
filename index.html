@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recetas de la Abuela</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+
+<body>
+  <header>
+    <h1>Recetas de la Abuela</h1>
+    <div class="banner">
+        <h1>Recetario Facil de Cocinar</h1>
+        <p>Comidas deliciosas, nutritivas y Mexicanas</p>
+      </div>
+    <input type="text" id="busqueda" placeholder="Buscar por receta...">
+  </header>
+
+  <main>
+    <section id="recetas">
+      <article class="tarjeta">
+        <img src="imagenes/tacos.jpg" alt="Tacos">
+        <h2>Tacos</h2>
+        <p>El ícono de la comida mexicana: rellenos variados, tortillas calientes y mucha tradición.</p>
+        <a href="recetas/tacos.html">Ver receta</a>
+      </article>
+
+      <article class="tarjeta">
+        <img src="imagenes/enchiladas.jpg" alt="Enchiladas">
+        <h2>Enchiladas</h2>
+        <p>Tortillas rellenas bañadas en salsa, gratinadas o servidas con crema y queso.</p>
+        <a href="recetas/enchiladas.html">Ver receta</a>
+      </article>
+
+      <article class="tarjeta">
+        <img src="imagenes/tamales.jpg" alt="Tamales">
+        <h2>Tamales</h2>
+        <p>Clásicos envueltos de masa cocida al vapor: dulces o salados, siempre deliciosos.</p>
+        <a href="recetas/tamales.html">Ver receta</a>
+      </article>
+
+      <article class="tarjeta">
+        <img src="imagenes/mole.jpg" alt="Mole Poblano">
+        <h2>Mole Poblano</h2>
+        <p>Salsa compleja con chiles, especias y chocolate. Ideal para ocasiones especiales y reuniones familiares</p>
+        <a href="recetas/mole.html">Ver receta</a>
+      </article>
+
+      <article class="tarjeta">
+        <img src="imagenes/pozole.jpg" alt="Pozole">
+         <h2>Pozole</h2>
+        <p>Caldo tradicional de maíz con carne y guarniciones frescas. Infaltable en celebraciones.</p>
+        <a href="recetas/pozole.html">Ver receta</a>
+        
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Recetas de la Abuela. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const buscador = document.getElementById('busqueda');
+    buscador.addEventListener('input', function () {
+      const term = this.value.toLowerCase();
+      const tarjetas = document.querySelectorAll('.tarjeta');
+      tarjetas.forEach(tarjeta => {
+        const texto = tarjeta.innerText.toLowerCase();
+        tarjeta.style.display = texto.includes(term) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
+

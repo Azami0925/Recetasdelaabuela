@@ -1,0 +1,246 @@
+/* 1) Importa una tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* 2) Variables CSS para mantener consistencia */
+:root {
+  --clr-primary: #ff4343;
+  --clr-secondary: #ffab91;
+  --clr-text: #333;
+  --clr-bg: #fafafa;
+  --ff-base: 'Poppins', sans-serif;
+  --fs-base: 1rem;       /* 16px */
+  --fs-lg: 1.125rem;     /* 18px */
+  --fs-xl: 1.5rem;       /* 24px */
+  --fs-xxl: 2rem;        /* 32px */
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+/* 3) Reset y cuerpo */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  line-height: 1.6;
+}
+
+/* 4) Banner moderno */
+header {
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+  padding: 3em 1em;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: var(--fs-xxl);
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+.banner p {
+  font-size: var(--fs-lg);
+  font-weight: 300;
+}
+
+/* 5) Input de búsqueda */
+#busqueda {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 1.5em auto;
+  padding: 0.75em 1em;
+  font-size: var(--fs-lg);
+  border: 2px solid #ddd;
+  border-radius: var(--radius);
+  transition: border var(--transition);
+}
+
+#busqueda:focus {
+  outline: none;
+  border-color: var(--clr-primary);
+}
+
+/* 6) Grid de recetas */
+#recetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2em;
+  padding: 2em;
+}
+
+/* 7) Tarjetas modernas */
+.tarjeta {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tarjeta h2 {
+  font-size: var(--fs-xl);
+  margin: 0.75em 0 0.25em;
+  color: var(--clr-primary);
+}
+
+.tarjeta p {
+  font-size: var(--fs-lg);
+  padding: 0 1em;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+.tarjeta a {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.5em 1em;
+  background: var(--clr-primary);
+  color: white;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background var(--transition);
+}
+
+.tarjeta a:hover {
+  background: var(--clr-secondary);
+}
+
+/* 8) Pie de página */
+footer {
+  text-align: center;
+  padding: 1.5em 0;
+  background: #fff;
+  font-size: var(--fs-lg);
+  color: #777;
+}
+/* ——— Estilos comunes para banners de subpáginas ——— */
+.page-banner {
+  text-align: center;
+  color: white;
+  padding: 3em 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Contenido interno */
+.banner-content h1 {
+  font-size: var(--fs-xxl);
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* ——— Colores específicos por receta ——— */
+.tacos-banner {
+  background: linear-gradient(135deg, #D35400, #E67E22);
+}
+.enchiladas-banner {
+  background: linear-gradient(135deg, #C0392B, #E74C3C);
+}
+.tamales-banner {
+  background: linear-gradient(135deg, #196F3D, #27AE60);
+}
+.mole-banner {
+  background: linear-gradient(135deg, #6E2C00, #873600);
+}
+.pozole-banner {
+  background: linear-gradient(135deg, #8E44AD, #C39BD3);
+}
+
+/* ——— Estilos para el contenido de la receta ——— */
+.contenido-receta {
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 0 1em;
+  line-height: 1.7;
+  font-size: var(--fs-lg);
+}
+
+.contenido-receta h2 {
+  font-size: var(--fs-xl);
+  margin-top: 1.5em;
+  color: var(--clr-primary);
+}
+
+.contenido-receta ul,
+.contenido-receta ol {
+  margin: 0.5em 0 1.5em 1.5em;
+}
+
+.contenido-receta li {
+  margin-bottom: 0.6em;
+}
+
+.imagen-receta {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1.5em;
+}
+
+/* Asegúrate de que el enlace de “volver” esté bien separado */
+.contenido-receta a {
+  display: inline-block;
+  margin-top: 2em;
+  color: var(--clr-primary);
+  font-weight: 600;
+}
+.subnav {
+  text-align: center;
+  margin-top: 2em;
+}
+.subnav a {
+  margin: 0 0.8em;
+  color: var(--clr-primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+.subnav a:hover {
+  text-decoration: underline;
+}
+.volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--clr-primary);
+  color: white;
+  padding: 0.5em 0.8em;
+  border-radius: 50%;
+  font-size: 1.2em;
+  text-decoration: none;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+.volver-arriba:hover {
+  background: var(--clr-primary-dark);
+}
+main {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
