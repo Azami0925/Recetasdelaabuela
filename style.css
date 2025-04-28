@@ -153,21 +153,76 @@ footer {
 }
 
 /* ——— Colores específicos por receta ——— */
-.tacos-banner {
-  background: linear-gradient(135deg, #D35400, #E67E22);
-}
-.enchiladas-banner {
-  background: linear-gradient(135deg, #C0392B, #E74C3C);
-}
 .tamales-banner {
-  background: linear-gradient(135deg, #196F3D, #27AE60);
+  /* 1) Cambia el gradiente por tu imagen: */
+  background-image: url('../imagenes/btamales.jpg');
+  /* 2) Asegúrate de que la imagen cubra todo el contenedor sin distorsionarse: */
+  background-size: cover;
+  /* 3) Centra la parte más importante de la foto: */
+  background-position: center;
+  /* 4) Define al menos una altura para el banner: ajusta 300px a lo que necesites */
+  min-height: 300px;
+  /* 5) Conserva el padding para que tu contenido responsive no se vea raro */
+  padding: 3em 1em;
+  /* 6) Al igual que antes, posicionamiento y overflow: */
+  position: relative;
+  overflow: hidden;
 }
-.mole-banner {
-  background: linear-gradient(135deg, #6E2C00, #873600);
+.tamales-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
+.tamales-banner .banner-content {
+  position: relative;  /* para que quede encima del overlay */
+}
+
+.tacos-banner {
+  /* 1) Cambia el gradiente por tu imagen: */
+  background-image: url('../imagenes/btacos.jpg');
+  /* 2) Asegúrate de que la imagen cubra todo el contenedor sin distorsionarse: */
+  background-size: cover;
+  /* 3) Centra la parte más importante de la foto: */
+  background-position: center;
+  /* 4) Define al menos una altura para el banner: ajusta 300px a lo que necesites */
+  min-height: 300px;
+  /* 5) Conserva el padding para que tu contenido responsive no se vea raro */
+  padding: 3em 1em;
+  /* 6) Al igual que antes, posicionamiento y overflow: */
+  position: relative;
+  overflow: hidden;
+}
+.tacos-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.tacos-banner .banner-content{
+  position: relative;  /* para que quede encima del overlay */
+}
+
 .pozole-banner {
-  background: linear-gradient(135deg, #8E44AD, #C39BD3);
+  background-image: url('../imagenes/bpozole.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  padding: 3em 1em;
+  position: relative;
+  overflow: hidden;
 }
+.pozole-banner:: ::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.pozole-banner .banner-content{
+  position: relative;
+}
+
+
 
 /* ——— Estilos para el contenido de la receta ——— */
 .contenido-receta {
